@@ -1,0 +1,7 @@
+1 #!/bin/bash
+2
+3 touch /tmp/regina.txt
+4 echo "Date is: $(date +'%D')" >> /tmp/regina.txt
+5 cat /etc/group | tail -3 | sed 's/user/regina_bolotnikova/g' >> /tmp/regina.txt
+6
+7 echo "done"
