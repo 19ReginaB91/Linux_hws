@@ -1,0 +1,23 @@
+1 #!/bin/bash
+2
+3 for run in {1..10}
+4 do
+5 date +"%H:%M:%S"
+6  ps -f |grep -vw UID | wc -l
+7 #sleep 5
+8
+9 done
+10
+11
+12 cat /proc/cpuinfo | grep -w vendor_id >> /opt/280223_m/regina_bolotnikova/mar.txt
+13
+14 cat /etc/os-release | head -1 >> /opt/280223_m/regina_bolotnikova/mar.txt
+15
+16 cat /etc/os-release | head -1 | awk '{print $2}' >> /opt/280223_m/regina_bolotnikova/mar.txt
+17
+18
+19
+20 for num in {100..50}
+21 do
+22 touch $num.txt
+23 done
