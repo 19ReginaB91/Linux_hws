@@ -1,0 +1,13 @@
+1 #!/bin/bash
+2
+3  for run in {1..10}
+4  do
+5 file=$run'_'$(date +"%H%M%S")
+6 touch /opt/280223_m/regina_bolotnikova/$run
+7 done
+8
+9
+10
+11
+12 Затем, после присвоения прав на исполнение моему скрипту, и его запуска, я вошла в  13crontab -e   и записала свой код следующи образом:
+*/15 * * * * /opt/280223_m/regina_bolotnikova/taskRegina.sh
